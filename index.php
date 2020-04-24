@@ -11,7 +11,7 @@
      <body>
      <h2>Kosmici mnie uprowadzili - zgłoszenie porwania</h2>
     <p>Podziel się historią uprowadzenia:</p>
-    <form method="post" action="mailto:marek@porwaniprzezufo.com">
+    <form method="post" action="raport.php">
          <label for="firstname">Imię:</label>
          <input type="text" id="firstname" name="firstname"/><br />
          <label for="lastname">Nazwisko:</label>
