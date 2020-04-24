@@ -16,6 +16,17 @@
             $alien_description = $_POST['aliendescription'];
             $fang_spotted = $_POST['fangspotted'];
             $email = $_POST['email'];
+            $dbc = mysqli_connect('localhost', 'root', '','aliendb_e7t1s1') 
+            or die ('Error connecting to MySQL server.');
+            $query = "INSERT INTO aliens_abduction (first_name, last_name, when_it_happened, how_long, " .
+                    . " how_many, alien_description, what_they_did, fang_spotted, other, email) " .
+                    . "VALUES ('$first_name','$last_name','$when_it_happened','$how_long','$how_many','$alien_description',"
+                    . "'$what_they_did','$fang_spotted','$other','$email')";
+           
+            $result = mysqli_query($dbc, $query) 
+            or die('Error querying database.');
+            
+            mysqli_close($dbc);
             echo $name;
             echo 'Dziękujemy za przesłanie formularza.<br />';
             echo 'Porwano cię' . $when_it_happened. '<br />';
